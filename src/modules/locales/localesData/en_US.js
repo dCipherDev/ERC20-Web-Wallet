@@ -53,7 +53,7 @@ export default {
     update_time:'Last Update',
   },
   feedback:{
-    email_to:"help@loopring.org",
+    email_to:"help@dcipher",
     email_subject:"Loopr Wallet Feedback",
     email_body:`
 ## ISSUES \n

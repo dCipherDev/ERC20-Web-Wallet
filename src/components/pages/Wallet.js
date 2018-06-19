@@ -124,11 +124,7 @@ class Home extends React.Component {
               <Tabs.TabPane tab={<div className="fs16 pl15 pr15 pt20 pb20 "> {intl.get("tabs.my_portfolio")}</div>}
                           key="portfolio"/>
              }
-            <Tabs.TabPane tab={<div className="fs16 pl15 pr15 pt20 pb20 "> {intl.get("tabs.my_assets")}</div>}
-                          key="assets"/>
-            <Tabs.TabPane tab={<div className="fs16 pl15 pr15 pt20 pb20 ">{intl.get("tabs.my_trades")}</div>}
-                          key="trades"/>
-          </Tabs>
+			  </Tabs>
 
           <Switch>
             <Route path={`${match.url}/portfolio`} exact render={() =>

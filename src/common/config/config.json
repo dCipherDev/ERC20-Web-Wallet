@@ -56,7 +56,11 @@
   ],
   "supportedTokenRInMarkets":["WETH", "LRC"],
   "markets": [
-
+    {
+      "tokenx": "LRC",
+      "tokeny": "WETH",
+      "pricePrecision": 8
+    },
     {
       "tokenx": "DAI",
       "tokeny": "WETH",
@@ -118,6 +122,11 @@
       "pricePrecision": 8
     },
     {
+      "tokenx": "ARP",
+      "tokeny": "WETH",
+      "pricePrecision": 8
+    },
+    {
       "tokenx": "EOS",
       "tokeny": "LRC",
       "pricePrecision": 8
@@ -169,6 +178,11 @@
     },
     {
       "tokenx": "VITE",
+      "tokeny": "LRC",
+      "pricePrecision": 8
+    },
+    {
+      "tokenx": "ARP",
       "tokeny": "LRC",
       "pricePrecision": 8
     }
@@ -242,6 +256,18 @@
       "website": "https://weth.io",
       "allowance": "1000000000000000000000",
       "allowanceWarn": "100000000000000000000",
+      "precision": 6,
+      "minTradeValue": 0.001
+    },
+    {
+      "symbol": "LRC",
+      "name": "Loopring",
+      "digits": 18,
+      "address": "0xEF68e7C694F40c8202821eDF525dE3782458639f",
+      "unit": "LRC",
+      "website": "https://loopring.org",
+      "allowance": "1000000000000000000000",
+      "allowanceWarn": "50000000000000000000",
       "precision": 6,
       "minTradeValue": 0.001
     },
@@ -738,6 +764,18 @@
       "minTradeValue": 0.001
     },
     {
+      "symbol": "ARP",
+      "name": "ARP",
+      "digits": 18,
+      "address": "0xBeB6fdF4ef6CEb975157be43cBE0047B248a8922",
+      "unit": "ARP",
+      "website": "",
+      "allowance": "1000000000000000000000",
+      "allowanceWarn": "100000000000000000000",
+      "precision": 6,
+      "minTradeValue": 0.001
+    },
+    {
       "symbol": "ROL",
       "name": "DICE",
       "digits": 16,
@@ -767,6 +805,18 @@
       "digits": 8,
       "address": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
       "unit": "CVC",
+      "website": "",
+      "allowance": "100000000000",
+      "allowanceWarn": "500000000",
+      "precision": 6,
+      "minTradeValue": 0.001
+    },
+    {
+      "symbol": "MTL",
+      "name": "MetalPay",
+      "digits": 8,
+      "address": "0xF433089366899D83a9f26A773D59ec7eCF30355e",
+      "unit": "MTL",
       "website": "",
       "allowance": "100000000000",
       "allowanceWarn": "500000000",
