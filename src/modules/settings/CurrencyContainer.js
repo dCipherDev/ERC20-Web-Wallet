@@ -13,15 +13,22 @@ class CurrencyContainer extends React.Component {
           title:'Dollar',
         };
         return '$'
-    }else{
-      currency = {
-        symbol:'CNY',
-        icon:'￥',
-        title:'Yuan',
-      };
-      return <span style={{marginRight:"-2px"}}>￥</span>
-    }
+    }else if(this.props.currency === 'RON'){
+    currency = {
+      symbol:'RON',
+      icon:'RON',
+      title:'RON',
+    };
+    return <span style={{marginRight:"-2px"}}>RON</span>
+  }else{
+    currency = {
+      symbol:'CNY',
+      icon:'￥',
+      title:'Yuan',
+    };
+    return <span style={{marginRight:"-2px"}}>￥</span>
   }
+ }
 }
 
 export default connect(({settings})=>({currency:settings.preference.currency}))(CurrencyContainer)

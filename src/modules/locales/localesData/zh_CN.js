@@ -792,6 +792,7 @@ export default {
     options_trade: "买卖",
     options_edit: "修改",
     add_token: "添加代币",
+    coming_soon: "快來了",
     token_address: "代币合约地址",
     token_name: "代币名称",
     token_symbol: "代币 Symbol",

@@ -28,6 +28,10 @@
     {
       "value": "zh",
       "label": "中文"
+    },
+	{
+      "value": "ro",
+      "label": "RO"
     }
   ],
   "fiat": [
@@ -38,6 +42,10 @@
     {
       "value": "cny",
       "label": "CNY"
+    },
+	{
+      "value": "ro",
+      "label": "RON"
     }
   ],
   "relays": [
@@ -52,6 +60,10 @@
     {
       "value": "//13.112.62.24",
       "name": "Test"
+    },
+    {
+      "value": "//mainnet.infura.io",
+      "name": "Infura"
     }
   ],
   "supportedTokenRInMarkets":["WETH", "LRC"],
@@ -422,6 +434,18 @@
       "address": "0x960b236A07cf122663c4303350609A66A7B288C0",
       "unit": "ANT",
       "website": "https://aragon.one/",
+      "allowance": "1000000000000000000000",
+      "allowanceWarn": "5000000000000000000",
+      "precision": 6,
+      "minTradeValue": 0.001
+    },
+    {
+      "symbol": "NBAI",
+      "name": "Nebula AI Token",
+      "digits": 18,
+      "address": "0x17f8aFB63DfcDcC90ebE6e84F060Cc306A98257D",
+      "unit": "NBAI",
+      "website": "",
       "allowance": "1000000000000000000000",
       "allowanceWarn": "5000000000000000000",
       "precision": 6,

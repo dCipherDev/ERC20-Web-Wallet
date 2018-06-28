@@ -197,6 +197,10 @@
     {
       "value": "zh",
       "label": "中文"
+    },
+	{
+      "value": "ro",
+      "label": "RO"
     }
   ],
   "fiat": [
@@ -207,6 +211,10 @@
     {
       "value": "cny",
       "label": "CNY"
+    },
+	{
+      "value": "ro",
+      "label": "RON"
     }
   ],
   "relays": [

@@ -209,7 +209,12 @@ class ListSidebar extends React.Component {
             prefix={<Icon type="search" className="color-grey-600"/>}
             suffix={
               <div className="row gutter-0 align-items-center">
-                <div className="col"></div>
+                <div style={{paddingRight:'5px'}} className='zb-b-b cursor-pointer token-item-sidebar text-center pt10 pb10'
+                 onClick={showModal.bind(this, {id: "token/add"})}>
+                 <Tooltip title={intl.get('tokens.add_token')}>
+                  <Icon type="plus"/>
+                 </Tooltip>
+                </div> 
                 <div className="col-auto pr5">
                   <Tooltip title={intl.get('tokens.only_show_favorites')}>
                     {

@@ -129,14 +129,14 @@ class Home extends React.Component {
           <Switch>
             <Route path={`${match.url}/portfolio`} exact render={() =>
               <div className="row no-gutters bg-white wallet-assets-container"
-                   style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+                   style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <Portfolio/>
               </div>
             }
             />
             <Route path={`${match.url}/assets`} exact render={() =>
               <div className="row no-gutters bg-white wallet-assets-container"
-                   style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+                   style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <div className="col zb-b-r" style={{flex:'0 0 30%'}}>
                   <Token.ListSidebar/>
                 </div>
@@ -148,7 +148,7 @@ class Home extends React.Component {
             />
             <Route path={`${match.url}/assets/:token`} exact render={() =>
               <div className="row no-gutters bg-white wallet-assets-container"
-                   style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+                   style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <div className="col-4 zb-b-r">
                   <Token.ListSidebar selectedToken={location.pathname.replace(`/wallet/assets/`, '')}/>
                 </div>
@@ -160,7 +160,7 @@ class Home extends React.Component {
             />
             <Route path={`${match.url}/assets2`} render={() =>
               <div className="row no-gutters bg-white wallet-assets-container"
-                   style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+                   style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <div className="col-4 zb-b-r">
                   <Token.ListSidebar/>
                 </div>
@@ -171,13 +171,13 @@ class Home extends React.Component {
             }
             />
             <Route path={`${match.url}/orders`} exact render={() =>
-              <div className="pb0 bg-white wallet-orders-container" style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+              <div className="pb0 bg-white wallet-orders-container" style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <Order.List id="orders/wallet"/>
               </div>
             }
             />
             <Route path={`${match.url}/trades`} render={() =>
-              <div className="pb0 bg-white wallet-trades-container" style={{borderRadius: '0px', border: '1px solid rgba(0,0,0,0.08)'}}>
+              <div className="pb0 bg-white wallet-trades-container" style={{borderRadius: '3px', border: '1px solid rgba(0,0,0,0.08)'}}>
                 <Trade.List/>
               </div>
             }

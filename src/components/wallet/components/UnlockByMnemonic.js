@@ -28,12 +28,12 @@ class UnlockByMnemonic extends React.Component {
   handleWalletType = (option) => {
     let {password, mnemonic, address} = this.state;
     const wallet = wallets[option];
-    if (mnemonic && wallet && isValidateMnemonic(mnemonic) && (wallet.name === 'Loopring Wallet' && password || wallet.name !== 'Loopring Wallet')) {
-      address = wallet.name === 'Loopring Wallet' ? this.decrypt(wallet.dpath, mnemonic, password) : this.decrypt(wallet.dpath, mnemonic)
+    if (mnemonic && wallet && isValidateMnemonic(mnemonic) && (wallet.name === 'dCipher Wallet' && password || wallet.name !== 'dCipher Wallet')) {
+      address = wallet.name === 'dCipher Wallet' ? this.decrypt(wallet.dpath, mnemonic, password) : this.decrypt(wallet.dpath, mnemonic)
     } else {
       address = null;
     }
-    password = wallet.name === 'Loopring Wallet' ? password:null;
+    password = wallet.name === 'dCipher Wallet' ? password:null;
     this.setState({wallet, address,password});
     this.props.form.setFieldsValue({address})
   };
@@ -46,8 +46,8 @@ class UnlockByMnemonic extends React.Component {
 
   handlePasswordChange = (e) => {
     let {mnemonic, wallet, address} = this.state;
-    if (wallet && mnemonic && isValidateMnemonic(mnemonic) && (wallet.name === 'Loopring Wallet' && e.target.value || wallet.name !== 'Loopring Wallet')) {
-      address = wallet.name === 'Loopring Wallet' ? this.decrypt(wallet.dpath, mnemonic, e.target.value) : this.decrypt(wallet.dpath, mnemonic)
+    if (wallet && mnemonic && isValidateMnemonic(mnemonic) && (wallet.name === 'dCipher Wallet' && e.target.value || wallet.name !== 'dCipher Wallet')) {
+      address = wallet.name === 'dCipher Wallet' ? this.decrypt(wallet.dpath, mnemonic, e.target.value) : this.decrypt(wallet.dpath, mnemonic)
     } else {
       address = null;
     }
@@ -57,8 +57,8 @@ class UnlockByMnemonic extends React.Component {
 
   handleMnemonicChange = (e) => {
     let {wallet, address, password} = this.state;
-    if (wallet && e.target.value && isValidateMnemonic(e.target.value) && (wallet.name === 'Loopring Wallet' && password || wallet.name !== 'Loopring Wallet')) {
-      address = wallet.name === 'Loopring Wallet' ? this.decrypt(wallet.dpath, e.target.value, password) : this.decrypt(wallet.dpath, e.target.value)
+    if (wallet && e.target.value && isValidateMnemonic(e.target.value) && (wallet.name === 'dCipher Wallet' && password || wallet.name !== 'dCipher Wallet')) {
+      address = wallet.name === 'dCipher Wallet' ? this.decrypt(wallet.dpath, e.target.value, password) : this.decrypt(wallet.dpath, e.target.value)
     } else {
       address = null;
     }
@@ -194,11 +194,11 @@ class UnlockByMnemonic extends React.Component {
               <Input.TextArea size="large" autosize={{minRows: 2, maxRows: 6}} onChange={this.handleMnemonicChange}/>
             )}
           </Form.Item>
-          {wallet.name === 'Loopring Wallet' && <Form.Item className="mb5" label={intl.get('wallet.password')}>
+          {wallet.name === 'dCipher Wallet' && <Form.Item className="mb5" label={intl.get('wallet.password')}>
             {form.getFieldDecorator('password', {
               initialValue: '',
               rules: [{
-                required: wallet.name === 'Loopring Wallet',
+                required: wallet.name === 'dCipher Wallet',
                 message: intl.get('wallet.password_tip')
               }]
             })(
@@ -216,11 +216,11 @@ class UnlockByMnemonic extends React.Component {
           </Form.Item>
         </Form>
 
-        <Button type="primary" className="d-block w-100 mb10" size="large"
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50 mb10" size="large"
                 disabled={!address}
                 onClick={this.unlockWallet}>{intl.get('mnemonic.unlock_default_address')}</Button>
 
-        <Button  className="d-block w-100" size="large"
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} className="d-block w-50" size="large"
                 disabled={!address}
                 onClick={this.showAddresses}>{intl.get('mnemonic.choose_other_address')}</Button>
       </div>

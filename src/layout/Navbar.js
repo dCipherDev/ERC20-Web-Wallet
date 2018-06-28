@@ -31,7 +31,7 @@ function Navbar(props){
         locale:value
       }
     });
-    let currency = value.startsWith('en' ) ? 'USD' : 'CNY'
+    let currency = value.startsWith('en' ) ? 'USD' : 'CNY' || 'RON'
     props.dispatch({
       type:'settings/preferenceChange',
       payload:{
@@ -76,6 +76,11 @@ function Navbar(props){
 
   const getFlagIcon = (name)=>{
     switch (name) {
+      case "ro-RO":
+        return (
+          <img style={{height:'18px',width:'24px'}} src={require('../assets/images/flag-ro.jpg')} />
+          )
+        break;
       case "zh-CN":
         return (
           <img style={{height:'18px',width:'24px'}} src={require('../assets/images/flag-ch.png')} />
@@ -177,8 +182,16 @@ function Navbar(props){
               </div>
             </div>
             <div className="col-sm-4 text-center pl0 pr0 zb-b-b">
+            <a href="https://www.dcipher.io" target="_blank">
+                <div className="fs14 color-black-2 navbar-account-grid cursor-pointer" onClick={() => window.open = ('this.href')}>
+                    <Icon type="windows-o" className="d-block grid-icon" />
+                    <div className="grid-title text-truncate text-nowrap">{intl.get('navbar.subs.website')}</div>
+                </div>
+            </a>
+            </div>
+            <div className="col-sm-4 text-center pl0 pr0 zb-b-b">
                 <div className="fs14 color-black-2 navbar-account-grid cursor-pointer" onClick={quit}>
-                    <Icon type="poweroff" className="d-block grid-icon" />
+                    <Icon style={{color:'#FF0000'}} type="poweroff" className="d-block grid-icon" />
                     <div className="grid-title text-truncate text-nowrap">{intl.get('navbar.subs.quit')}</div>
                 </div>
             </div>
@@ -353,14 +366,14 @@ function Navbar(props){
                 }
                 {
                   !account.address &&
-                  <span className="fs16 color-green-1">
+                  <span className="fs16 color-green-1">                   
                     {intl.get('navbar.account')}
-                    <Icon type="down" className="color-grey-400 fs12 ml5" />
+                    <Icon type="wallet" className="fs18 m15"/>
                   </span>
                 }
             </Popover>
           </div>
-          <div className="col-auto pl15 pr15 zb-b-r" style={{paddingTop:'30px'}}>
+          <div className="col-auto pl15 pr15 zb-b-r" style={{paddingTop:'31px'}}>
             <Select showArrow={false} dropdownMatchSelectWidth={false} value={props.locales.locale} onChange={localeChange} className="navbar-language fs16">
               {localesOptions}
             </Select>

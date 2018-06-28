@@ -191,7 +191,7 @@ class UnlockByKeyStore extends React.Component {
                  onKeyDown={this.bindEnter.bind(this)}/>
         </div>
         }
-        <Button type="primary" className="d-block w-100" size="large" onClick={this.unlock}
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={this.unlock}
                 loading={loading}
                 disabled={keyStore === '' || (isPasswordRequired && password === "")}>{intl.get('wallet.unlock')}</Button>
       </div>

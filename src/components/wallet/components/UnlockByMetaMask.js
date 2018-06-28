@@ -228,16 +228,16 @@ class UnlockByMetaMask extends React.Component {
           </div>
         }
         {this.state.browserSupported && this.state.metamaskState === 'locked' &&
-          <Button type="primary" className="d-block w-100" size="large" onClick={openToRefresh}>{intl.get('wallet.metamask_to_unlock')}</Button>
+          <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={openToRefresh}>{intl.get('wallet.metamask_to_unlock')}</Button>
         }
         {this.state.browserSupported && this.state.metamaskState === 'uninstall' &&
-        <Button type="primary" className="d-block w-100" size="large" onClick={openToRefresh}>{intl.get('wallet.metamask_to_install')}</Button>
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={openToRefresh}>{intl.get('wallet.metamask_to_install')}</Button>
         }
         {this.state.browserSupported && !this.state.metamaskState &&
-        <Button type="primary" className="d-block w-100" size="large" onClick={this.connectToMetamask} loading={loading}>{intl.get('wallet.connect_to_metamask')}</Button>
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={this.connectToMetamask} loading={loading}>{intl.get('wallet.connect_to_metamask')}</Button>
         }
         {!this.state.browserSupported &&
-          <Button type="primary" className="d-block w-100" size="large" disabled>{intl.get('wallet.connect_to_metamask_not_supported_browser')}</Button>
+          <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" disabled>{intl.get('wallet.connect_to_metamask_not_supported_browser')}</Button>
         }
       </div>
     )

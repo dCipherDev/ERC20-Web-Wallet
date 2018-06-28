@@ -61,7 +61,7 @@ class UnlockByTrezor extends React.Component {
           showIcon={false}
         />
         <div className="color-grey-500 fs12 mb10 mt15"></div>
-        <Button type="primary" className="d-block w-100" size="large"
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large"
                 onClick={this.connectTrezor}>{intl.get('wallet.connect_trezor')}</Button>
       </div>
     )

@@ -30,26 +30,26 @@ function UnlockWallet({form,modal,account}) {
           <Tabs defaultActiveKey={!account || account.walletType !== 'Address' ? "address" : "metamask"} tabPosition="left" animated={true}>
             {
               !account || account.walletType !== 'Address' &&
-              <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.watch_only')}</div>} key="address">
+              <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/watchonly.png" style={{"marginRight": "5px"}}/> {intl.get('wallet.watch_only')}</div>} key="address">
                 <UnlockByAddress modal={modal} account={account} pageFrom={pageFrom}/>
               </Tabs.TabPane>
             }
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.metamask')}</div>} key="metamask">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/metamask.png" style={{"marginRight": "10px"}}/>{intl.get('wallet.metamask')}</div>} key="metamask">
               <UnlockByMetaMask modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.trezor')}</div>} key="trezor">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/trezor.png" style={{"marginRight": "10px"}}/>{intl.get('wallet.trezor')}</div>} key="trezor">
               <UnlockByTrezor modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.ledger')}</div>} key="ledger">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/ledgerwallet.jpg" style={{"marginRight": "10px"}}/>{intl.get('wallet.ledger')}</div>} key="ledger">
               <UnlockByLedger modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.keystore')}</div>} key="keystore">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/keystorefile.png" style={{"marginRight": "10px"}}/>{intl.get('wallet.keystore')}</div>} key="keystore">
              <UnlockByKeystore modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.mnemonic')}</div>} key="mnemonic">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/Mnemonic.jpg" style={{"marginRight": "10px"}}/>{intl.get('wallet.mnemonic')}</div>} key="mnemonic">
               <UnlockByMnemonic modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
-            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left">{intl.get('wallet.privateKey')}</div>} key="privatekey">
+            <Tabs.TabPane className="pl10" tab={<div className="fs2 text-left"><img src ="src/assets/images/privatekey.png" style={{"marginRight": "10px"}}/>{intl.get('wallet.privateKey')}</div>} key="privatekey">
              <UnlockByPrivateKey modal={modal} account={account} pageFrom={pageFrom}/>
             </Tabs.TabPane>
           </Tabs>

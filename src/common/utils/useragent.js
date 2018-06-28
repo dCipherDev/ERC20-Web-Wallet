@@ -15,8 +15,9 @@ export default class UserAgent {
       return 'zh-CN'
     } else if (language.startsWith('en')) {
       return 'en-US'
-    }
-
+    } else if (language.startsWith('ro')) {
+      return 'ro-RO'
+	}
     return 'en-US'
   }
 

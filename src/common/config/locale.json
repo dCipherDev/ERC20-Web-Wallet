@@ -1,5 +1,9 @@
 [
   {
+    "name": "RO",
+    "value": "ro-RO"
+  },
+  {
     "name": "中文",
     "value": "zh-CN"
   },

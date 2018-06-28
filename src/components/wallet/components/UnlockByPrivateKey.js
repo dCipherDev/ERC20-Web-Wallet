@@ -92,7 +92,7 @@ class UnlockByPrivateKey extends React.Component {
             )}
           </Form.Item>
         </Form>
-        <Button onClick={handleSubmit.bind(this)} type="primary" className="d-block w-100" size="large"
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} onClick={handleSubmit.bind(this)} type="primary" className="d-block w-50" size="large"
                 disabled={!this.state.privateKey || !this.state.valid}>{intl.get('wallet.unlock')}</Button>
       </div>
     )

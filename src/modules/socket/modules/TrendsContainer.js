@@ -21,6 +21,21 @@ class TrendsSocketContainer extends React.Component {
       })
     })
   }
+
+  componentDidMount() {
+    const { socket } = this.context
+    if (!socket) {
+      console.log('socket connection has not been established')
+      return false
+    }
+    const currency = window.STORAGE.settings.getCurrency() || 'RON' // TODO
+    const data = {currency}
+    socket.on('trends_res', (res)=>{
+      this.setState({
+        trends:res.result,
+      })
+    })
+  }
   componentWillUnmount() {
     const { socket } = this.context
     if (!socket) {

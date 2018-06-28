@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Card, Form, Input, Spin} from 'antd';
+import {Button, Card, Form, Input, Spin, Tooltip} from 'antd';
 import Token from 'Loopring/ethereum/token'
 import validator from 'Loopring/ethereum/validator';
 import intl from 'react-intl-universal';
@@ -92,10 +92,12 @@ class AddCustomToken extends React.Component {
             <Form.Item className="">
               <div className="row">
                 <div className="col">
-                  <Button onClick={this.handleSubmit.bind(this)} type="primary" className="d-block w-100" size="large"
+                <Tooltip title={intl.get('tokens.coming_soon')}>
+                  <Button disabled onClick={this.handleSubmit.bind(this)} type="primary" className="d-block w-100" size="large"
                           disabled={!(address && name && digits && symbol)}>
                     {intl.get('tokens.confirm_save')}
                   </Button>
+                </Tooltip>
                 </div>
               </div>
             </Form.Item>
@@ -148,5 +150,3 @@ class AddCustomToken extends React.Component {
 
 
 export default Form.create()(AddCustomToken);
-
-

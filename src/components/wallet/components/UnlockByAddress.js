@@ -74,7 +74,7 @@ class UnlockByAddress extends React.Component {
             </Form.Item>
           </Form>
         </div>
-        <Button type="primary" className="d-block w-100" size="large" onClick={unlocked} >{intl.get('wallet.unlock_by_address')}</Button>
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={unlocked} >{intl.get('wallet.unlock_by_address')}</Button>
       </div>
     )
   }

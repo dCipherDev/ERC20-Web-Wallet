@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import { LocaleProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import en_US from 'antd/lib/locale-provider/en_US';
+//import ro_RO from 'antd/lib/locale-provider/ro_RO';
 const antdLocales = {zh_CN,en_US}
 
 const Locales = ({ history,locales={},children})=>{

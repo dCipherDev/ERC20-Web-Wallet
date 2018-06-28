@@ -56,9 +56,9 @@ class  Home extends React.Component {
             {
               !(window.WALLET && window.WALLET.getAddress()) &&
               <div className="">
-                <Button onClick={showModal.bind(this,'wallet/unlock')} className="m15 ant-btn-xl fs2" style={{width:'255px'}} type="primary">{intl.get('buttons.unlock_wallet')}</Button>           
-                <a href="https://www.dcipher.io/hub" target="_blank"> <Button onClick={() => window.open = ('this.href')} className="m15 ant-btn-xl fs2" style={{width:'255px'}} type="primary">{intl.get('buttons.join_crowdsale')}</Button> </a>
-			  </div>
+                <Button onClick={showModal.bind(this,'wallet/unlock')} className="m15 ant-btn-xl fs2" style={{width:'255px',borderRadius:'5px'}} type="primary">{intl.get('buttons.unlock_wallet')}</Button>           
+                <a href="https://www.dcipher.io/hub" target="_blank"> <Button onClick={() => window.open = ('this.href')} className="m15 ant-btn-xl fs2" style={{width:'255px',borderRadius:'5px'}} type="primary">{intl.get('buttons.join_crowdsale')}</Button> </a>
+			        </div>
             }
         </div>
           {

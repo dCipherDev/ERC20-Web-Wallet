@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb,Alert} from 'antd'
 import GlobalFooter from './Footer'
 import Navbar from './Navbar'
+import nodes from './nodes.png'
 const { Header, Content, Footer } = Layout
 
 const HomeLayout = (props)=>{
@@ -28,8 +29,8 @@ const MainLayout = (props)=>{
       <Header className="bg-white">
         <Navbar {...props} />
       </Header>
-      <Content className="" style={{background:'#F8F8F8'}}>
-        <div className="">
+      <Content className="" style={{background:'#f0fffa'}}>
+        <div className="" >
           {children}
         </div>
       </Content>

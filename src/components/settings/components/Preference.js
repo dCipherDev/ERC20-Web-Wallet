@@ -88,6 +88,7 @@ const Perference = ({
             >
               <Select.Option value="USD">USD</Select.Option>
               <Select.Option value="CNY">CNY</Select.Option>
+			  <Select.Option value="RON">RON</Select.Option>
             </Select>
           )}
         </Form.Item>

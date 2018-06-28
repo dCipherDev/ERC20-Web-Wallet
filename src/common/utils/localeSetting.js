@@ -5,6 +5,7 @@ import moment from 'moment';
 
 
 const locales = {
+  "ro-RO": locale.ro_RO,
   "en-US": locale.en_US,
   "zh-CN": locale.zh_CN,
   "fr-FR":locale.fr_FR
@@ -13,6 +14,9 @@ const locales = {
 export function setLocale(value) {
 
   switch (value) {
+	case "ro-RO" :
+      moment.locale('ro-ro');
+      break;
     case "zh-CN" :
       moment.locale('zh-cn');
       break;

@@ -121,6 +121,8 @@ export function clearPrefix(input) {
 
 export function getDisplaySymbol(settingsCurrency) {
   switch (settingsCurrency) {
+	case 'RON':
+      return 'RON';
     case 'CNY':
       return '￥';
     case 'USD':

@@ -131,7 +131,7 @@ class UnlockByLedger extends React.Component {
           showIcon={false}
         />
         <div className="color-grey-500 fs12 mb10 mt15"></div>
-        <Button type="primary" className="d-block w-100" size="large" onClick={this.connect} loading={loading}> {intl.get('wallet.connect_to_ledger')}</Button>
+        <Button style={{borderRadius:'5px',marginLeft:'25%'}} type="primary" className="d-block w-50" size="large" onClick={this.connect} loading={loading}> {intl.get('wallet.connect_to_ledger')}</Button>
       </div>
     )
   }

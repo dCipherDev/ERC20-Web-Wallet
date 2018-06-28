@@ -15,7 +15,7 @@ const get = ()=>{
     return {
       preference: {
         language: window.USER_AGENT.getLanguage() || 'en-US',
-        currency: window.USER_AGENT.getLanguage() === 'zh-CN' ? 'CNY':"USD",
+        currency: window.USER_AGENT.getLanguage() === 'zh-CN' ? 'RON':"USD",
         timezone: "UTC+00:00"
       },
       trading: {
